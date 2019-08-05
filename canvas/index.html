@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas</title>
+    
+</head>
+<body>
+   
+   <canvas width="500" height="500" style="border:3px solid" id="ctx"></canvas>
+    
+    
+    
+    
+    <script>
+    
+        var ctx = document.getElementById('ctx').getContext('2d');
+        
+//        
+//        document.getElementById('ctx').addEventListener('click' , function(){
+//            console.log('inside drawrect');
+//            ctx.fillStyle = 'red';
+//            ctx.fillRect(100 , 100 , 50 , 50);
+//        });
+        
+       document.addEventListener('keydown' , function(event){
+           console.log(event.keyCode);
+           
+       })
+    
+    
+    </script>
+    
+</body>
+</html>

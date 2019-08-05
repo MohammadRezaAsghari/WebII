@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>snake game</title>
+</head>
+<body>
+    <canvas id="ctx" width="500" height="500" style="border:3px solid"></canvas>
+    
+    
+    
+    <script>
+    
+        
+        
+        
+        function startGame(){
+            var ctx = document.getElementById('ctx').getContext('2d');
+            var snakeList , foodList;
+        
+            var food = {
+                width:20,
+                height:20,
+                color:'orange'
+            }
+        
+        
+            var snakeBody = {
+                width:20,
+                height:20,
+                color:'orangered'
+            }
+
+            snakeList = [
+                {x:220 , y:200},
+                {x:210 , y:200},
+                {x:200 , y:200}
+            ];
+        
+        
+            function drawSnake(sb , i){
+                ctx.save();
+                
+                if(i == 0)
+                    ctx.fillStyle = 'gray';
+                else    
+                    ctx.fillStyle = snakeBody.color;
+                ctx.fillRect(sb.x , sb.y , snakeBody.width , snakeBody.height);
+                
+                ctx.restore();
+            }
+            
+            
+            //call drawSnake
+            snakeList.forEach(drawSnake);
+            
+        
+        }
+
+        
+        
+        startGame();
+        
+        
+        
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>
